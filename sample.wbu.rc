@@ -1,0 +1,31 @@
+# 
+# Configuration file for wikibackup.pl
+#
+# This is YAML!
+wiki:
+   user: remote login 
+   host: remote host
+   path: path/to/wiki
+# the wiki name above will be appended to the backuppath:
+   backuppath: path/to/backup/root
+# Inclusions are marked by "i"
+# Exclusions are marked by "e"
+   exclusions:
+       - i /cookbook/
+       - i /wiki.d/
+       - e /wiki.d/.flock
+       - e /wiki.d/.pageindex
+       - e /wiki.d/.lastmod
+       - e /wiki.d/*,del-*
+       - e /wiki.d/*/*,del-*
+       - i /pub/
+       - i /local/
+       - i /uploads/
+       - e /*
+       - e **~
+       - e **,v
+       - e **.bak
+       - e **.tgz
+       - e **.zip
+       - e **.gz
+       - e **.Z

@@ -1,0 +1,11 @@
+# Ignore the usual suspects
+*~
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.bzip2
+# these are built from the perl source
+wikibackups.html
+wikibackups.1.man
